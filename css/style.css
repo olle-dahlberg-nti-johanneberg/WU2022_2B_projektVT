@@ -23,39 +23,54 @@ body {
     "a3 a3 a3 a3 a3"
     "fo fo fo fo fo"
     ;
-    grid-template-rows: 20vh 10vh 70vh 50px 200vh 50px 90vh 10vh;
+    grid-template-rows: 10vh 20vh 70vh 10vh 200vh 10vh 90vh 10vh;
     grid-template-columns: repeat(5, 1fr);
 }
 
 .nav     {
     grid-area: na;
 
-    background-color: violet;
+    background-color: rgb(243, 176, 204);
     
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
 }
 
 .nav > .button {
     background-color: whitesmoke;
     display: table;
-    width: 20%;
     text-align: center;
     border-radius: 5px;
     height: 80%;
+    margin: 5px;
 }
 
 .nav > .button > a {
-display: table-cell;
-vertical-align: middle;
-font-size: 4rem;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3rem;
 }
 
 header {
     grid-area: he;
-    background-color: rgb(168, 119, 119);
+    background-color: rgba(255, 255, 255, 0);
+    width: 100vw;
+    height: 20vh;
+   
+    
+
+    display: table;
+}
+
+header h1 {
+    color:rgb(0, 0, 0);
+    display: table-cell;
+    vertical-align: middle; 
+}
+#logo_multicolor {
+    color:rgb(99, 99, 99);
 }
 
 .line1 {
@@ -70,6 +85,15 @@ header {
     grid-area: a1;
     background-color: tomato;
 }
+
+.article1 img {
+    height: 90vh;
+    width: 70%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 100%;
+}
+
 .article2 {
     grid-area: a2;
     background-color: tomato;
