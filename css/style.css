@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    display: grid;
+    grid-template-areas: 
+    "na na na na na"
+    "he he he he he"
+    "a1 a1 a1 a1 a1"
+    "sb sb sb sb sb"
+    "ca ca ca ca ca"
+    "sb sb sb sb sb"
+    "a2 a2 a2 a2 a2"
+    "fo fo fo fo fo";
+    grid-template-rows: 20vh 10vh 70vh auto 180vh auto 70vh 10vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#nav {
+    grid-area: na;
+    background-color: aqua;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    grid-area: he;
+    background-color: aqua;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
