@@ -10,23 +10,43 @@
 <body>
     <div class="wrapper">
         <div class="nav">
-            <div class="button"><a href="#">Hörlurar</a></div>
+            <div class="button"><a href="#">Over-ear</a></div>
+            <div class="button"><a href="#">In-ear</a></div>
             <div class="button"><a href="#">Högtalare</a></div>
         </div>
 
         <header id="header">
-            <h1 id="title-long">H<span id="logo_multicolor">i</span>gh F<span id="logo_multicolor">i</span>delity W<span id="logo_multicolor">i</span>reless<br></h1>
+            <h1 id="title-long">H<span id="logo_multicolor">i</span>gh W<span id="logo_multicolor">i</span>reless F<span id="logo_multicolor">i</span>delity<br></h1>
             
          </header>
 
         <article class="article1">
-            <img src="img/airpodsmax.jpg" alt="">
+            <img id="img" src="img/airpodsmax.jpg" alt="" class="img">
             
         </article>
         
         <div id="shadow"></div>
 
-        <article class="article2"></article>
+        <article class="article2">
+            <div id="card1">
+                <img src="#" alt="">
+                <h2></h2>
+                <h4></h4>
+
+            </div>
+            <div id="card1">
+                    <img src="#" alt="">
+                    <h2></h2>
+                    <h4></h4>
+    
+            </div>
+            <div id="card1">
+                    <img src="#" alt="">
+                    <h2></h2>
+                    <h4></h4>
+    
+            </div>
+        </article>
 
         <article class="article3"></article>
 
@@ -38,22 +58,19 @@
 
     <script>
 
-        var header = document.getElementById("header")
+        var header = document.getElementById("header");
+        var img = document.getElementById('img');
         window.addEventListener('scroll', () => {
             const scrollable = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = window.scrollY;
-            
-
-            console.log(scrolled);
+            img.style.filter = `blur(${scrolled / 100}px)`
 
             if (scrolled >= ((scrollable * 40) / (420 - 100))) {
-                header.classList.add('scrolled')
+                header.classList.add('scrolled');
 
-            } else 
-                header.classList.remove('scrolled')
-
-
-
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
