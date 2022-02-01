@@ -14,13 +14,17 @@
             <div class="button"><a href="#">Högtalare</a></div>
         </div>
 
-        <header id="header"><h1 id="title">
-            H<span id="logo_multicolor">i</span>gh<br> F<span id="logo_multicolor">i</span>delity<br> W<span id="logo_multicolor">i</span>reless<br>
-        </h1></header>
+        <header id="header">
+            <h1 id="title-long">H<span id="logo_multicolor">i</span>gh F<span id="logo_multicolor">i</span>delity W<span id="logo_multicolor">i</span>reless<br></h1>
+            
+         </header>
 
         <article class="article1">
             <img src="img/airpodsmax.jpg" alt="">
+            
         </article>
+        
+        <div id="shadow"></div>
 
         <article class="article2"></article>
 
@@ -35,17 +39,20 @@
     <script>
 
         var header = document.getElementById("header")
-        var title = document.getElementById("title")
         window.addEventListener('scroll', () => {
             const scrollable = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = window.scrollY;
+            
 
             console.log(scrolled);
 
-            if (scrolled >= ((scrollable * 10) / (420 - 100))) {
-                header.setAttribute("style", "position: fixed; background-color: white; height: 10vh;");
+            if (scrolled >= ((scrollable * 40) / (420 - 100))) {
+                header.classList.add('scrolled')
+
             } else 
-                header.setAttribute("style", "position: relative;");   
+                header.classList.remove('scrolled')
+
+
 
         });
     </script>
