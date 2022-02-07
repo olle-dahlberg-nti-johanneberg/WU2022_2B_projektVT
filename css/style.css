@@ -16,7 +16,7 @@ body {
 
 
 .wrapper {
-    width: 100vw;
+    width: 100%;
 
     display: grid;
     grid-template-areas:
@@ -32,26 +32,32 @@ body {
     ;
     grid-template-rows: 10vh 30vh 0px 60vh 10vh 200vh 10vh 90vh 10vh;
     grid-template-columns: repeat(7, 1fr);
+    overflow-x: hidden;
 }
 
 .nav     {
     grid-area: na;
 
     background-color: rgb(250, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
 }
 
-.nav > .button {
+.button {
     background-color: rgb(240, 240, 240);
     display: table;
     text-align: center;
     border-radius: 5px;
     height: 80%;
-    width: 25%
+    width: 25%;
+    border-color: black;
+    border-width: 2px;
+    border: rgb(15, 15, 15) solid 2px;  
 }
 
 .nav > .button > a {
@@ -74,7 +80,8 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
+    z-index: 100 
 }
 
 #title-long {
@@ -88,16 +95,17 @@ header {
 }
 
 #logo_multicolor {
-    color:rgb(163, 0, 136);
+    color:rgb(255, 255, 255);
 }
 
 
 .scrolled {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.85  );
-    height: 5vh;
+    height: 10vh;
     width: 100%;
     border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 
@@ -110,11 +118,13 @@ header {
 .line1 {
     grid-area: l1;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .line2 {
     grid-area: l2;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .article1 {
@@ -124,7 +134,7 @@ header {
 
 .article1 img {
     background-size: cover;
-    width: auto;
+    width: 100%;
     height: 90%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -138,6 +148,7 @@ header {
     position: absolute;
     z-index: -1;
     border-radius: 10px;
+    object-fit: cover; 
 }
 
 #shadow {
@@ -158,19 +169,62 @@ header {
     height: 100%;
     grid-template-areas: 
     ".. .. .. .. .."
+    ".. t1 .. .. .."
     ".. c1 .. .. .."
+    ".. .. .. t2 .."
     ".. .. .. c2 .."
+    ".. t3 .. .. .."
     ".. c3 .. .. .."
     ".. .. .. .. ..";
-    grid-template-rows: 2fr 4fr 4fr 4fr 2fr;
+    grid-template-rows: 2fr 1fr 4fr 1fr 4fr 1fr 4fr 2fr;
     grid-template-columns: 1fr 3fr 1fr 3fr 1fr
+}
+
+
+.article2 h1 {
+    font-size: 4rem;
+}
+
+
+#cardtitle1 {
+    grid-area: t1;
+    text-align: center;
+}
+#cardtitle2 {
+    grid-area: t2;
+    text-align: center;
+}
+#cardtitle3 {
+    grid-area: t3;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(248, 248, 248);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.2) 20px 60px 40px -7px;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.0) 00px 00px 60px 0px;
+    transform: translate(20px, 60px);
+    transform: scale(0.95, 0.95);
 }
 
 #card1 {
     grid-area: c1;
-    background-color: rgb(248, 248, 248);
-    border-radius: 50px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+
+#card2 {
+    grid-area: c2;
+}
+
+#card3 {
+    grid-area: c3;
 }
 
 
