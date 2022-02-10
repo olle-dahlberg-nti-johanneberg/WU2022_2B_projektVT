@@ -20,13 +20,17 @@
 
         <header id="header">
             <h1 id="title-long">High Wireless Fidelity</h1>
-            <list>
+            <li id="menu-list">
                 <div class="button"><a href="#">Over ear</a></div>
                 <div class="button"><a href="#">In ear</a></div>
                 <div class="button"><a href="#">Högtalare</a></div>
                 <div class="button"><a href="#">Surround</a></div>
                 <div class="button"><a href="#">Mikrofon</a></div>
-            </list>
+            </li>
+            <li id="misc-list">
+                    <div class="button"><a href="#">Logga in</a></div>
+                    <div class="button"><a href="#">Kontakta oss</a></div>
+                </li>
          </header>
 
         <article class="article1">
@@ -37,6 +41,9 @@
         <div id="shadow"></div>
 
         <article class="article2">
+
+
+            <img src="img/wu-yi-nLRX1koA8Zo-unsplash (1).jpg" alt="högtalare" id="speakers">
 
             <h1 id="cardtitle1">Högtalare</h1>
             <h1 id="cardtitle2">Over-ear</h1>
@@ -49,6 +56,8 @@
                 <h4></h4>
 
             </div>
+            <img src="img/blackwhiteairpodsmax.png" alt="hörlurar" id="airpodsmax">
+
             <div class="card" id="card2">
                     <img src="#" alt="">
                     <h2>Kort 2</h2>
@@ -71,23 +80,6 @@
         <footer class=footer></footer>
     </div>    
 
-    <script>
-
-        var header = document.getElementById("header");
-        var img = document.getElementById('img');
-        window.addEventListener('scroll', () => {
-            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = window.scrollY;
-            img.style.filter = `blur(${scrolled / 100}px)`
-
-            if (scrolled >= ((scrollable * 40) / (420 - 100))) {
-                header.classList.add('scrolled');
-                
-
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
