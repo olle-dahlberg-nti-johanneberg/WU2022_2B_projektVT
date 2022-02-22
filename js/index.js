@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('nav-active')
     burgerbutton.classList.remove('toggle')
 
-    if (scrolled >= ((scrollable * 40) / (820 - 100))) {
+    if (scrolled >= ((scrollable * 40) / (1020 - 100))) {
         header.classList.add('scrolled');
         img.style.filter = `blur(${scrolled / 100}px)`
     } 
@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
 
 
     // airpodsmax in
-    if  (scrolled >= ((scrollable * 140) / (820 - 100)) && scrolled <= ((scrollable * 350) / (820 - 100))) {
+    if  (scrolled >= ((scrollable * 140) / (1020 - 100)) && scrolled <= ((scrollable * 640) / (1020 - 100))) {
         airpodsmax.classList.add('visible')
         c1.classList.add('visible')
     }
@@ -54,7 +54,7 @@ window.addEventListener('scroll', () => {
 
 
     // airpods in, svart bakgrund
-    if  (scrolled >= ((scrollable * 340) / (820 - 100)) && scrolled <= ((scrollable * 550) / (820 - 100))) {
+    if  (scrolled >= ((scrollable * 540) / (1020 - 100)) && scrolled <= ((scrollable * 920) / (1020 - 100))) {
         airpods.classList.add('visible')
         c2.classList.add('visible')
       
@@ -67,7 +67,7 @@ window.addEventListener('scroll', () => {
 
 
     // scroll up button in 
-    if (scrolled >= ((scrollable * 720) / (820 - 100))) {
+    if (scrolled >= ((scrollable * 920) / (1020 - 100))) {
         btt.classList.add('show');
     } 
     else {

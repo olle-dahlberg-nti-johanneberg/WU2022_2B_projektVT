@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
         "l2 l2 l2 l2 l2 l2 l2"
         "a3 a3 a3 a3 a3 a3 a3"
         "fo fo fo fo fo fo fo";
-    grid-template-rows: 0vh 40vh 0px 60vh 10vh 600vw 10vh 90vh 10vh;
+    grid-template-rows: 0vh 40vh 0px 60vh 10vh 800vw 10vh 90vh 10vh;
     grid-template-columns: repeat(7, 1fr);
     overflow-x: hidden;
 }
@@ -245,12 +245,14 @@ header .button {
     grid-area: l1;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    z-index: 5;
 }
 
 .line2 {
     grid-area: l2;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    z-index: 5;
 }
 
 .article1 {
@@ -314,14 +316,14 @@ header .button {
     flex: 1;
 }
 
-#article2a3 {
+/* #article2a3 {
    
     background: linear-gradient(45deg, rgba(255,61,223,1) 0%, rgba(0,239,255,1) 100%);
     width: 100%;
     flex: 1;
 
     z-index: 4;
-}
+} */
 
 #article2title {
     grid-area: at;
@@ -388,6 +390,8 @@ header .button {
     flex: none;
     position: absolute;
     transform: translateX(900px);
+        
+   
 }
 
 #airpodsmax.visible {
@@ -397,7 +401,6 @@ header .button {
     width: 30vw;
     left: 50%;
     display: block;
-    
     transition-duration: 500ms;
     transform: translateX(0px);
 }
@@ -441,6 +444,7 @@ header .button {
     position: absolute;
     z-index: 3;
     transform: translateX(900px);
+  
 }
 
 #airpods.visible {
@@ -450,8 +454,8 @@ header .button {
     width: 30vw;
     left: 50%;
     display: block;
-    
     transition-duration: 500ms;
+    
     transform: translateX(0px);
 }
 
@@ -470,6 +474,7 @@ header .button {
 
 .article3 {
     grid-area: a3;
+    z-index: 5;
 }
 
 .footer {
