@@ -12,7 +12,9 @@ const c3 = document.querySelector('#card3')
 
 
 const airpodsmax = document.querySelector('#airpodsmax')
-const airpods = document.querySelector('#airpods')
+const airpodscase = document.querySelector('#airpods-case')
+const airpodsleft = document.querySelector('#airpods-left')
+const airpodsright = document.querySelector('#airpods-right')
 
 var scrolled2 = 0
     var lastScrollTop = 0;
@@ -55,14 +57,17 @@ window.addEventListener('scroll', () => {
 
     // airpods in, svart bakgrund
     if  (scrolled >= ((scrollable * 340) / (820 - 100)) && scrolled <= ((scrollable * 550) / (820 - 100))) {
-        airpods.classList.add('visible')
+        airpodscase.classList.add('visible')
+        airpodsleft.classList.add('visible')
+        airpodsright.classList.add('visible')
         c2.classList.add('visible')
       
     }
     else {
         c2.classList.remove('visible')
-        airpods.classList.remove('visible')
-      
+        airpodscase.classList.remove('visible')
+        airpodsleft.classList.remove('visible')
+        airpodsright.classList.remove('visible')
     }
 
 
