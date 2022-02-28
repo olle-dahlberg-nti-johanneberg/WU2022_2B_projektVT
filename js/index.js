@@ -12,7 +12,9 @@ const c3 = document.querySelector('#card3')
 
 
 const airpodsmax = document.querySelector('#airpodsmax')
-const airpods = document.querySelector('#airpods')
+const airpodscase = document.querySelector('#airpods-case')
+const airpodsleft = document.querySelector('#airpods-left')
+const airpodsright = document.querySelector('#airpods-right')
 
 var scrolled2 = 0
     var lastScrollTop = 0;
@@ -29,7 +31,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('nav-active')
     burgerbutton.classList.remove('toggle')
 
-    if (scrolled >= ((scrollable * 40) / (1020 - 100))) {
+    if (scrolled >= ((scrollable * 60) / (1040 - 100))) {
         header.classList.add('scrolled');
         img.style.filter = `blur(${scrolled / 100}px)`
     } 
@@ -43,7 +45,7 @@ window.addEventListener('scroll', () => {
 
 
     // airpodsmax in
-    if  (scrolled >= ((scrollable * 140) / (1020 - 100)) && scrolled <= ((scrollable * 640) / (1020 - 100))) {
+    if  (scrolled >= ((scrollable * 140) / (940 - 100)) && scrolled <= ((scrollable * 640) / (1040 - 100))) {
         airpodsmax.classList.add('visible')
         c1.classList.add('visible')
     }
@@ -54,20 +56,23 @@ window.addEventListener('scroll', () => {
 
 
     // airpods in, svart bakgrund
-    if  (scrolled >= ((scrollable * 540) / (1020 - 100)) && scrolled <= ((scrollable * 920) / (1020 - 100))) {
-        airpods.classList.add('visible')
+    if  (scrolled >= ((scrollable * 540) / (1040 - 100)) && scrolled <= ((scrollable * 740) / (1040 - 100))) {
+        airpodscase.classList.add('visible')
+        airpodsleft.classList.add('visible')
+        airpodsright.classList.add('visible')
         c2.classList.add('visible')
       
     }
     else {
         c2.classList.remove('visible')
-        airpods.classList.remove('visible')
-      
+        airpodscase.classList.remove('visible')
+        airpodsleft.classList.remove('visible')
+        airpodsright.classList.remove('visible')
     }
 
 
     // scroll up button in 
-    if (scrolled >= ((scrollable * 920) / (1020 - 100))) {
+    if (scrolled >= scrollable) {
         btt.classList.add('show');
     } 
     else {
