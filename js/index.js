@@ -1,9 +1,26 @@
 
 const header = document.getElementById("header");
-const img = document.getElementById('img');
+const img1 = document.getElementById('img');
 const burgerbutton = document.querySelector('#svg-bag')
 const nav = document.querySelector('.pop-down-menu')
 const btt = document.querySelector('.backtotop')
+const img_article = document.querySelector('.image-article')
+
+
+
+
+const sonycard = document.querySelector('#sony-card')
+const airpodscard = document.querySelector('#airpods-card')
+
+
+
+const sonyimgdesc = document.querySelector('#sony-img-desc')
+const airpodsimgdesc = document.querySelector('#airpods-img-desc')
+
+const sonybbc = document.querySelector('#sony-bbc')
+const airpodsbbc = document.querySelector('#airpods-bbc')
+
+
 
 const c1 = document.querySelector('#card1')
 const c2 = document.querySelector('#card2')
@@ -16,36 +33,57 @@ const airpodscase = document.querySelector('#airpods-case')
 const airpodsleft = document.querySelector('#airpods-left')
 const airpodsright = document.querySelector('#airpods-right')
 
+const apt1 = document.querySelector('#apt1')
+const apt2 = document.querySelector('#apt2')
+const apt3 = document.querySelector('#apt3')
+const apt4 = document.querySelector('#apt4')
+
+
+
 var scrolled2 = 0
-    var lastScrollTop = 0;
+var lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
     scrolled2 = scrolled 
     
+    console.log(scrollable);
+
+    img_article.style.transform = `translate(0px, ${scrolled * (-0.3)}px)`
+
     
 
-       
+    sonycard.style.transform = `translateY(${scrolled * (-0.05)}px)`
+    airpodscard.style.transform = `translateY(${scrolled * (-0.05) + 50}px)`
+
+    sonyimgdesc.style.transform = `translate(50px, ${scrolled * (-0.1)}px)`
+    airpodsimgdesc.style.transform = `translate(50px, ${scrolled * (-0.1) + 50}px)`
+    
+    sonybbc.style.transform = `translate(100%, ${scrolled * (-0.1) - 50}px)`
+    airpodsbbc.style.transform = `translate(100%, ${scrolled * (-0.05)}px)`
+
 
     nav.classList.remove('nav-active')
     burgerbutton.classList.remove('toggle')
 
-    if (scrolled >= ((scrollable * 60) / (1040 - 100))) {
+
+    img1.style.filter = `blur(${scrolled / 100}px)`
+
+    if (scrolled >= ((35 * scrollable) / (1120 - 100))) {
         header.classList.add('scrolled');
-        img.style.filter = `blur(${scrolled / 100}px)`
+        
     } 
     else {
         header.classList.remove('scrolled');
-        img.style.filter = `blur(${0}px)`
+        // img1.style.filter = `blur(${0}px)`
 
         nav.classList.remove('nav-active')
         burgerbutton.classList.remove('toggle')
     }
 
-
     // airpodsmax in
-    if  (scrolled >= ((scrollable * 140) / (940 - 100)) && scrolled <= ((scrollable * 640) / (1040 - 100))) {
+    if  (scrolled >= ((scrollable * 200) / (1220 - 100)) && scrolled <= ((scrollable * 740) / (1220 - 100))) {
         airpodsmax.classList.add('visible')
         c1.classList.add('visible')
     }
@@ -55,8 +93,41 @@ window.addEventListener('scroll', () => {
     }
 
 
+
+
+
+
+    if  (scrolled >= ((scrollable * 600) / (1220 - 100)) && scrolled <= ((scrollable * 700) / (1220 - 100))) {
+        apt1.classList.add('visible')
+    }
+    else {
+        apt1.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 650) / (1220 - 100)) && scrolled <= ((scrollable * 700) / (1220 - 100))) {
+        apt2.classList.add('visible')
+    }
+    else {
+        apt2.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 700) / (1220 - 100)) && scrolled <= ((scrollable * 750) / (1220 - 100))) {
+        apt3.classList.add('visible')
+    }
+    else {
+        apt3.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 750) / (1220 - 100)) && scrolled <= ((scrollable * 800) / (1220 - 100))) {
+        apt4.classList.add('visible')
+    }
+    else {
+        apt4.classList.remove('visible')
+    }
+
+
     // airpods in, svart bakgrund
-    if  (scrolled >= ((scrollable * 540) / (1040 - 100)) && scrolled <= ((scrollable * 740) / (1040 - 100))) {
+    if  (scrolled >= ((scrollable * 800) / (1220 - 100)) && scrolled <= ((scrollable * 900) / (1220 - 100))) {
         airpodscase.classList.add('visible')
         airpodsleft.classList.add('visible')
         airpodsright.classList.add('visible')
@@ -98,3 +169,5 @@ function toggleMenu() {
 }
 
 burgerbutton.addEventListener('click', toggleMenu)
+
+
