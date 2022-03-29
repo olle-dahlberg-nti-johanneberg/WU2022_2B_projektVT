@@ -11,15 +11,12 @@ const img_article = document.querySelector('.image-article')
 
 const sonycard = document.querySelector('#sony-card')
 const airpodscard = document.querySelector('#airpods-card')
+const jblcard = document.querySelector('#jbl-card')
 
 
-
-const sonyimgdesc = document.querySelector('#sony-img-desc')
-const airpodsimgdesc = document.querySelector('#airpods-img-desc')
-
-const sonybbc = document.querySelector('#sony-bbc')
-const airpodsbbc = document.querySelector('#airpods-bbc')
-
+const sonyinfopanel = document.querySelector('#sony-info-panel')
+const airpodsinfopanel = document.querySelector('#airpods-info-panel')
+const jblinfopanel = document.querySelector('#jbl-info-panel')
 
 
 const c1 = document.querySelector('#card1')
@@ -38,6 +35,11 @@ const apt2 = document.querySelector('#apt2')
 const apt3 = document.querySelector('#apt3')
 const apt4 = document.querySelector('#apt4')
 
+const c1t1 = document.querySelector('#c1t1')
+const c1t2 = document.querySelector('#c1t2')
+const c1t3 = document.querySelector('#c1t3')
+const c1t4 = document.querySelector('#c1t4')
+
 
 
 var scrolled2 = 0
@@ -53,15 +55,16 @@ window.addEventListener('scroll', () => {
     img_article.style.transform = `translate(0px, ${scrolled * (-0.3)}px)`
 
     
+    sonycard.style.transform = `translateY(${scrolled * (-0.05) - 40}px)`
+    airpodscard.style.transform = `translateY(${scrolled * (-0.10) + 50}px)`
+    jblcard.style.transform = `translateY(${scrolled * (-0.15) + 140}px)`
 
-    sonycard.style.transform = `translateY(${scrolled * (-0.05)}px)`
-    airpodscard.style.transform = `translateY(${scrolled * (-0.05) + 50}px)`
-
-    sonyimgdesc.style.transform = `translate(50px, ${scrolled * (-0.1)}px)`
-    airpodsimgdesc.style.transform = `translate(50px, ${scrolled * (-0.1) + 50}px)`
+    sonyinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 40}px)`
+    airpodsinfopanel.style.transform = `translateY(${scrolled * (-0.125) + 110}px)`
+    jblinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 140}px)`
     
-    sonybbc.style.transform = `translate(100%, ${scrolled * (-0.1) - 50}px)`
-    airpodsbbc.style.transform = `translate(100%, ${scrolled * (-0.05)}px)`
+    // sonybbc.style.transform = `translate(100%, ${scrolled * (-0.1) - 50}px)`
+    // airpodsbbc.style.transform = `translate(100%, ${scrolled * (-0.05)}px)`
 
 
     nav.classList.remove('nav-active')
@@ -82,8 +85,43 @@ window.addEventListener('scroll', () => {
         burgerbutton.classList.remove('toggle')
     }
 
+
+
+
+
+
+
+    // airpods max beskrivning
+    if  (scrolled >= ((scrollable * 250) / (1220 - 100)) && scrolled <= ((scrollable * 300) / (1220 - 100))) {
+        c1t1.classList.add('visible')
+    }
+    else {
+        c1t1.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 300) / (1220 - 100)) && scrolled <= ((scrollable * 350) / (1220 - 100))) {
+        c1t2.classList.add('visible')
+    }
+    else {
+        c1t2.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 350) / (1220 - 100)) && scrolled <= ((scrollable * 400) / (1220 - 100))) {
+        c1t3.classList.add('visible')
+    }
+    else {
+        c1t3.classList.remove('visible')
+    }
+
+    if  (scrolled >= ((scrollable * 400) / (1220 - 100)) && scrolled <= ((scrollable * 450) / (1220 - 100))) {
+        c1t4.classList.add('visible')
+    }
+    else {
+        c1t4.classList.remove('visible')
+    }
+
     // airpodsmax in
-    if  (scrolled >= ((scrollable * 200) / (1220 - 100)) && scrolled <= ((scrollable * 740) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 450) / (1220 - 100)) && scrolled <= ((scrollable * 600) / (1220 - 100))) {
         airpodsmax.classList.add('visible')
         c1.classList.add('visible')
     }
@@ -96,29 +134,30 @@ window.addEventListener('scroll', () => {
 
 
 
+    //airpods pro
 
-    if  (scrolled >= ((scrollable * 600) / (1220 - 100)) && scrolled <= ((scrollable * 700) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 700) / (1220 - 100)) && scrolled <= ((scrollable * 800) / (1220 - 100))) {
         apt1.classList.add('visible')
     }
     else {
         apt1.classList.remove('visible')
     }
 
-    if  (scrolled >= ((scrollable * 650) / (1220 - 100)) && scrolled <= ((scrollable * 700) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 750) / (1220 - 100)) && scrolled <= ((scrollable * 800) / (1220 - 100))) {
         apt2.classList.add('visible')
     }
     else {
         apt2.classList.remove('visible')
     }
 
-    if  (scrolled >= ((scrollable * 700) / (1220 - 100)) && scrolled <= ((scrollable * 750) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 800) / (1220 - 100)) && scrolled <= ((scrollable * 850) / (1220 - 100))) {
         apt3.classList.add('visible')
     }
     else {
         apt3.classList.remove('visible')
     }
 
-    if  (scrolled >= ((scrollable * 750) / (1220 - 100)) && scrolled <= ((scrollable * 800) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 850) / (1220 - 100)) && scrolled <= ((scrollable * 900) / (1220 - 100))) {
         apt4.classList.add('visible')
     }
     else {
@@ -127,7 +166,7 @@ window.addEventListener('scroll', () => {
 
 
     // airpods in, svart bakgrund
-    if  (scrolled >= ((scrollable * 800) / (1220 - 100)) && scrolled <= ((scrollable * 900) / (1220 - 100))) {
+    if  (scrolled >= ((scrollable * 900) / (1220 - 100)) && scrolled <= ((scrollable * 1000) / (1220 - 100))) {
         airpodscase.classList.add('visible')
         airpodsleft.classList.add('visible')
         airpodsright.classList.add('visible')
