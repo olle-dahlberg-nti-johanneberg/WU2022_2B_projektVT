@@ -1,72 +1,67 @@
 
 const header = document.getElementById("header");
 const img1 = document.getElementById('img');
-const burgerbutton = document.querySelector('#svg-bag')
-const nav = document.querySelector('.pop-down-menu')
-const btt = document.querySelector('.backtotop')
-const img_article = document.querySelector('.image-article')
+const burgerbutton = document.querySelector('#svg-bag');
+const nav = document.querySelector('.pop-down-menu');
+const btt = document.querySelector('.backtotop');
+const img_article = document.querySelector('.image-article');
 
 
 
 
-const sonycard = document.querySelector('#sony-card')
-const airpodscard = document.querySelector('#airpods-card')
-const jblcard = document.querySelector('#jbl-card')
+const sonycard = document.querySelector('#sony-card');
+const airpodscard = document.querySelector('#airpods-card');
+const jblcard = document.querySelector('#jbl-card');
 
 
-const sonyinfopanel = document.querySelector('#sony-info-panel')
-const airpodsinfopanel = document.querySelector('#airpods-info-panel')
-const jblinfopanel = document.querySelector('#jbl-info-panel')
+const sonyinfopanel = document.querySelector('#sony-info-panel');
+const airpodsinfopanel = document.querySelector('#airpods-info-panel');
+const jblinfopanel = document.querySelector('#jbl-info-panel');
 
 
-const c1 = document.querySelector('#card1')
-const c2 = document.querySelector('#card2')
-const c3 = document.querySelector('#card3')
+const c1 = document.querySelector('#card1');
+const c2 = document.querySelector('#card2');
+const c3 = document.querySelector('#card3');
+
+
+const airpodsmax = document.querySelector('#airpodsmax');
+const airpodscase = document.querySelector('#airpods-case');
+const airpodsleft = document.querySelector('#airpods-left');
+const airpodsright = document.querySelector('#airpods-right');
+
+const apt1 = document.querySelector('#apt1');
+const apt2 = document.querySelector('#apt2');
+const apt3 = document.querySelector('#apt3');
+const apt4 = document.querySelector('#apt4');
+
+const c1t1 = document.querySelector('#c1t1');
+const c1t2 = document.querySelector('#c1t2');
+const c1t3 = document.querySelector('#c1t3');
+const c1t4 = document.querySelector('#c1t4');
 
 
 
-const airpodsmax = document.querySelector('#airpodsmax')
-const airpodscase = document.querySelector('#airpods-case')
-const airpodsleft = document.querySelector('#airpods-left')
-const airpodsright = document.querySelector('#airpods-right')
-
-const apt1 = document.querySelector('#apt1')
-const apt2 = document.querySelector('#apt2')
-const apt3 = document.querySelector('#apt3')
-const apt4 = document.querySelector('#apt4')
-
-const c1t1 = document.querySelector('#c1t1')
-const c1t2 = document.querySelector('#c1t2')
-const c1t3 = document.querySelector('#c1t3')
-const c1t4 = document.querySelector('#c1t4')
-
-
-
-var scrolled2 = 0
+var scrolled2 = 0;
 var lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight
     const scrolled = window.scrollY;
-    scrolled2 = scrolled 
+    scrolled2 = scrolled;
     
     console.log(scrollable);
 
-    img_article.style.transform = `translate(0px, ${scrolled * (-0.3)}px)`
+    img_article.style.transform = `translate(0px, ${scrolled * (-0.3)}px)`;
 
     
-    sonycard.style.transform = `translateY(${scrolled * (-0.05) - 40}px)`
-    airpodscard.style.transform = `translateY(${scrolled * (-0.10) + 50}px)`
-    jblcard.style.transform = `translateY(${scrolled * (-0.15) + 140}px)`
+    sonycard.style.transform = `translateY(${scrolled * (-0.05) - 40}px)`;
+    airpodscard.style.transform = `translateY(${scrolled * (-0.10) + 50}px)`;
+    jblcard.style.transform = `translateY(${scrolled * (-0.15) + 140}px)`;
 
-    sonyinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 40}px)`
-    airpodsinfopanel.style.transform = `translateY(${scrolled * (-0.125) + 110}px)`
-    jblinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 140}px)`
+    sonyinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 40}px)`;
+    airpodsinfopanel.style.transform = `translateY(${scrolled * (-0.125) + 110}px)`;
+    jblinfopanel.style.transform = `translateY(${scrolled * (-0.1) + 140}px)`;
     
-    // sonybbc.style.transform = `translate(100%, ${scrolled * (-0.1) - 50}px)`
-    // airpodsbbc.style.transform = `translate(100%, ${scrolled * (-0.05)}px)`
-
-
     nav.classList.remove('nav-active')
     burgerbutton.classList.remove('toggle')
 
@@ -102,6 +97,7 @@ window.addEventListener('scroll', () => {
     if  (scrolled >= ((scrollable * 300) / (1220 - 100)) && scrolled <= ((scrollable * 350) / (1220 - 100))) {
         c1t2.classList.add('visible')
     }
+
     else {
         c1t2.classList.remove('visible')
     }
