@@ -40,6 +40,8 @@ const c1t3 = document.querySelector('#c1t3');
 const c1t4 = document.querySelector('#c1t4');
 
 
+const contactbtn = document.querySelector('#contact-btn');
+
 
 var scrolled2 = 0;
 var lastScrollTop = 0;
@@ -83,7 +85,7 @@ window.addEventListener('scroll', () => {
 
 
 
-
+    
 
 
     // airpods max beskrivning
@@ -197,6 +199,9 @@ window.addEventListener("scroll", function(){
     lastScrollTop = st <= 0 ? 0 : st; 
  }, false)
 
+function scrollBottom() {
+    window.scrollTo(1, document.body.scrollHeight);
+}
 
 function toggleMenu() {
     nav.classList.toggle('nav-active')
@@ -204,5 +209,5 @@ function toggleMenu() {
 }
 
 burgerbutton.addEventListener('click', toggleMenu)
-
+contactbtn.addEventListener('click', scrollBottom)
 

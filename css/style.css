@@ -74,16 +74,19 @@ body::-webkit-scrollbar {
 }
 
 .button {
-    display: table;
+   
     text-align: center;
     border-radius: 5px;
     height: 1.25em;
-    border-color: black;
-    border-width: 2px; 
+
+    font-size: 1rem;
+    
     margin: 7px;
     transition-duration: 150ms;
-    padding: 5px;
-    
+    padding: 0;
+    border: 0;
+    width: 100px;
+    height: 30px;
 }
 
 
@@ -115,7 +118,7 @@ header {
     
 }
 
-#title-long {
+#title {
     font-size: 5rem;
     color:rgb(0, 0, 0);
     vertical-align: middle;
@@ -127,6 +130,9 @@ header {
     align-self: center;
     
 }
+
+
+
 
 #i-dot {
     transform: scaleY(-1);
@@ -164,7 +170,7 @@ header {
 }
 
 
-.scrolled #title-long {
+.scrolled #title {
     font-size: 2rem;
     color: black;
     text-align: center;
@@ -821,7 +827,24 @@ header .button {
 .article3 {
     grid-area: a3;
     z-index: 5;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    padding: 100px;
 }
+
+.article3 h1 {
+    align-self: center;
+    justify-self: center;
+    font-size: 4rem;
+}
+
+.article3 h3 {
+    text-align: center;
+}
+
+
+
 
 .footer {
     grid-area: fo;
@@ -1213,7 +1236,7 @@ header .button {
         height: 100%;
     }
 
-    #title-long {
+    #title {
         color: white;
      
         width: 100vw;
@@ -1229,7 +1252,7 @@ header .button {
     
         
     }
-    .scrolled #title-long {
+    .scrolled #title {
         font-size: 2rem;
         color: black;
         text-align: center;   
